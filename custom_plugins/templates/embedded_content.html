@@ -1,0 +1,10 @@
+{% load embed_video_tags %}
+<div class="embedded-content-container"{% if instance.height %} style="padding-bottom: {{ instance.height }}"{% endif %}>
+    <div class="embedded-content">
+        {% video instance.content as my_video %}
+            <iframe class="youtube" src="{{ my_video.url }}?&modestbranding=1&showinfo=1&autoplay=0&rel=0&controls=2" frameborder="0" allowfullscreen="1" width="100%" height="100%"></iframe>
+        {% endvideo %}
+    </div>
+</div>
+
+

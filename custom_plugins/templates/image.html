@@ -1,0 +1,5 @@
+{% load thumbnail %}
+
+<span class="plugin_image{% if instance.float %} align-{{ instance.float }}{% endif %}">
+    <img src="{% if crop %}{% thumbnail instance.image dimensions crop %}{% else %}{% thumbnail instance.image dimensions %}{% endif %}" alt="{{ instance.alt }}" />
+</span>
