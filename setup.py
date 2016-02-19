@@ -14,6 +14,8 @@ setup(
     author='Damian Moore',
     url='https://github.com/damianmoore/djangocms-custom-plugins',
     packages=[
-        'custom_plugins',
-    ]
+        'custom_plugins', 'custom_plugins.migrations'
+    ],
+    package_data={'custom_plugins': ['templates/*']},
+    include_package_data=True
 )

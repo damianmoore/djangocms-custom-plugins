@@ -8,7 +8,7 @@ from .models import EmbeddedContentPluginModel, ImagePluginModel, FilePluginMode
 class EmbeddedContentPlugin(CMSPluginBase):
     model = EmbeddedContentPluginModel
     name = "Embedded Content"
-    render_template = "custom_plugins/embedded_content.html"
+    render_template = "embedded_content.html"
 
 plugin_pool.register_plugin(EmbeddedContentPlugin)
 
@@ -16,7 +16,7 @@ plugin_pool.register_plugin(EmbeddedContentPlugin)
 class ImagePlugin(CMSPluginBase):
     model = ImagePluginModel
     name = "Image"
-    render_template = "custom_plugins/image.html"
+    render_template = "image.html"
     text_enabled = True
 
     def render(self, context, instance, placeholder):
@@ -53,7 +53,7 @@ plugin_pool.register_plugin(ImagePlugin)
 class FilePlugin(CMSPluginBase):
     model = FilePluginModel
     name = "File"
-    render_template = "custom_plugins/file.html"
+    render_template = "file.html"
 
     def render(self, context, instance, placeholder):
         num = instance.file.size
@@ -76,6 +76,6 @@ plugin_pool.register_plugin(FilePlugin)
 class PlainTextPlugin(CMSPluginBase):
     model = PlainTextPluginModel
     name = "Plain Text"
-    render_template = "custom_plugins/plain_text.html"
+    render_template = "plain_text.html"
 
 plugin_pool.register_plugin(PlainTextPlugin)
