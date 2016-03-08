@@ -2,7 +2,7 @@ from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
 from easy_thumbnails.files import get_thumbnailer
 
-from .models import EmbeddedContentPluginModel, ImagePluginModel, FilePluginModel, PlainTextPluginModel
+from .models import EmbeddedContentPluginModel, ImagePluginModel, FilePluginModel, PlainTextPluginModel, RawHtmlPluginModel
 
 
 class EmbeddedContentPlugin(CMSPluginBase):
@@ -79,3 +79,11 @@ class PlainTextPlugin(CMSPluginBase):
     render_template = "custom_plugins/plain_text.html"
 
 plugin_pool.register_plugin(PlainTextPlugin)
+
+
+class RawHtmlPlugin(CMSPluginBase):
+    model = RawHtmlPluginModel
+    name = "Raw HTML"
+    render_template = "custom_plugins/raw_html.html"
+
+plugin_pool.register_plugin(RawHtmlPlugin)

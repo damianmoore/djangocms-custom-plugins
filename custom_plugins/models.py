@@ -39,3 +39,7 @@ class FilePluginModel(CMSPlugin):
 
 class PlainTextPluginModel(CMSPlugin):
     body = models.TextField()
+
+
+class RawHtmlPluginModel(CMSPlugin):
+    body = models.TextField()
