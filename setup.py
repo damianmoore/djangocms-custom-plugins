@@ -16,6 +16,6 @@ setup(
     packages=[
         'custom_plugins', 'custom_plugins.migrations'
     ],
-    package_data={'custom_plugins': ['templates/**']},
+    package_data={'custom_plugins': ['templates/custom_plugins/*.html', ]},
     include_package_data=True
 )
